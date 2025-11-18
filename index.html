@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Mobile-First Hiking Companion - Your digital hiking companion with compass, tracking, and weather features">
+    <meta name="theme-color" content="#1e3a5f">
+    <title>Hiking Companion</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="app-header">
+        <h1>🥾 Hiking Companion</h1>
+        <button id="theme-toggle" class="icon-btn" aria-label="Change theme">🎨</button>
+    </header>
+
+    <!-- Theme Selector Modal -->
+    <div id="theme-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Choose Theme</h2>
+            <div class="theme-options">
+                <button class="theme-btn" data-theme="navy">US Navy</button>
+                <button class="theme-btn" data-theme="forest">Forest</button>
+                <button class="theme-btn" data-theme="light">Light</button>
+                <button class="theme-btn" data-theme="dark">Dark</button>
+                <button class="theme-btn" data-theme="accessibility">High Contrast</button>
+            </div>
+            <button id="close-theme-modal" class="btn-secondary">Close</button>
+        </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+        <button class="nav-tab active" data-tab="compass">🧭 Compass</button>
+        <button class="nav-tab" data-tab="tracking">📍 Tracking</button>
+        <button class="nav-tab" data-tab="trails">🗺️ Trails</button>
+        <button class="nav-tab" data-tab="weather">🌤️ Weather</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="app-content">
+        <!-- Compass Tab -->
+        <section id="compass-tab" class="tab-content active">
+            <div class="compass-container">
+                <div class="compass-circle">
+                    <div class="compass-needle" id="compass-needle"></div>
+                    <div class="compass-labels">
+                        <span class="compass-label north">N</span>
+                        <span class="compass-label east">E</span>
+                        <span class="compass-label south">S</span>
+                        <span class="compass-label west">W</span>
+                    </div>
+                </div>
+                <div class="compass-info">
+                    <div class="heading-display">
+                        <span class="heading-value" id="heading-value">--</span>°
+                    </div>
+                    <div class="direction-display" id="direction-display">--</div>
+                </div>
+                <button id="calibrate-compass" class="btn-primary">Calibrate Compass</button>
+                <div id="compass-status" class="status-message"></div>
+            </div>
+        </section>
+
+        <!-- Tracking Tab -->
+        <section id="tracking-tab" class="tab-content">
+            <div class="tracking-container">
+                <div class="tracking-stats">
+                    <div class="stat-card">
+                        <div class="stat-label">Duration</div>
+                        <div class="stat-value" id="duration-value">00:00:00</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Distance</div>
+                        <div class="stat-value" id="distance-value">0.00 km</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Speed</div>
+                        <div class="stat-value" id="speed-value">0.0 km/h</div>
+                    </div>
+                </div>
+                <div class="tracking-controls">
+                    <button id="start-tracking" class="btn-primary">Start Hike</button>
+                    <button id="pause-tracking" class="btn-secondary hidden">Pause</button>
+                    <button id="resume-tracking" class="btn-secondary hidden">Resume</button>
+                    <button id="finish-tracking" class="btn-danger hidden">Finish Hike</button>
+                </div>
+                <div id="tracking-status" class="status-message"></div>
+                <div id="tracking-map" class="tracking-map"></div>
+            </div>
+        </section>
+
+        <!-- Trails Tab -->
+        <section id="trails-tab" class="tab-content">
+            <div class="trails-container">
+                <div class="trails-header">
+                    <h2>Nearby Trails</h2>
+                    <button id="find-trails" class="btn-primary">Find Trails</button>
+                </div>
+                <div id="trails-status" class="status-message"></div>
+                <div id="trails-list" class="trails-list">
+                    <!-- Trails will be populated here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather Tab -->
+        <section id="weather-tab" class="tab-content">
+            <div class="weather-container">
+                <div class="weather-header">
+                    <h2>Weather Conditions</h2>
+                    <button id="refresh-weather" class="btn-primary">Refresh</button>
+                </div>
+                <div id="weather-status" class="status-message"></div>
+                <div id="weather-current" class="weather-current">
+                    <!-- Current weather will be populated here -->
+                </div>
+                <div id="weather-forecast" class="weather-forecast">
+                    <!-- Forecast will be populated here -->
+                </div>
+                <div id="weather-recommendations" class="weather-recommendations">
+                    <!-- Hiking recommendations based on weather -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <p>&copy; 2025 Hiking Companion | Built for adventurers</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+/* Theme System */
+
+/* US Navy Theme (Default) */
+body[data-theme="navy"],
+body:not([data-theme]) {
+    --primary-color: #1e3a5f;
+    --secondary-color: #2c5f8d;
+    --accent-color: #ffd700;
+    --background-color: #f5f5f5;
+    --surface-color: #ffffff;
+    --text-color: #333333;
+    --text-secondary: #666666;
+    --border-color: #dddddd;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --danger-color: #f44336;
+}
+
+/* Forest Theme */
+body[data-theme="forest"] {
+    --primary-color: #2d5016;
+    --secondary-color: #4a7c2f;
+    --accent-color: #8fbc8f;
+    --background-color: #f4f1e8;
+    --surface-color: #ffffff;
+    --text-color: #2d3e1f;
+    --text-secondary: #5a6d4a;
+    --border-color: #c9d1b8;
+    --success-color: #6b8e23;
+    --warning-color: #d2691e;
+    --danger-color: #8b4513;
+}
+
+/* Light Theme (Day Mode) */
+body[data-theme="light"] {
+    --primary-color: #2196f3;
+    --secondary-color: #42a5f5;
+    --accent-color: #ff9800;
+    --background-color: #fafafa;
+    --surface-color: #ffffff;
+    --text-color: #212121;
+    --text-secondary: #757575;
+    --border-color: #e0e0e0;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --danger-color: #f44336;
+}
+
+/* Dark Theme (Night Mode) */
+body[data-theme="dark"] {
+    --primary-color: #90caf9;
+    --secondary-color: #64b5f6;
+    --accent-color: #ffa726;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --border-color: #333333;
+    --success-color: #66bb6a;
+    --warning-color: #ffa726;
+    --danger-color: #ef5350;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+body[data-theme="dark"] .compass-circle {
+    background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
+}
+
+body[data-theme="dark"] .app-header {
+    background: linear-gradient(135deg, #1e1e1e, #121212);
+}
+
+body[data-theme="dark"] .status-message.info {
+    background-color: #1a237e;
+    color: #90caf9;
+    border-color: #3949ab;
+}
+
+body[data-theme="dark"] .status-message.success {
+    background-color: #1b5e20;
+    color: #81c784;
+    border-color: #388e3c;
+}
+
+body[data-theme="dark"] .status-message.warning {
+    background-color: #e65100;
+    color: #ffb74d;
+    border-color: #f57c00;
+}
+
+body[data-theme="dark"] .status-message.error {
+    background-color: #b71c1c;
+    color: #e57373;
+    border-color: #c62828;
+}
+
+/* High Contrast Accessibility Theme */
+body[data-theme="accessibility"] {
+    --primary-color: #000000;
+    --secondary-color: #000000;
+    --accent-color: #ffff00;
+    --background-color: #ffffff;
+    --surface-color: #ffffff;
+    --text-color: #000000;
+    --text-secondary: #000000;
+    --border-color: #000000;
+    --success-color: #008000;
+    --warning-color: #ff8c00;
+    --danger-color: #ff0000;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+body[data-theme="accessibility"] .app-header {
+    background: #000000;
+}
+
+body[data-theme="accessibility"] .nav-tab {
+    border: 2px solid #000000;
+}
+
+body[data-theme="accessibility"] .nav-tab.active {
+    background-color: #ffff00;
+    color: #000000;
+}
+
+body[data-theme="accessibility"] .btn-primary {
+    background: #000000;
+    border: 3px solid #000000;
+}
+
+body[data-theme="accessibility"] .btn-secondary {
+    background: #000000;
+    border: 3px solid #000000;
+}
+
+body[data-theme="accessibility"] .compass-circle {
+    border: 6px solid #000000;
+    background: #ffffff;
+}
+
+body[data-theme="accessibility"] .compass-needle {
+    background: linear-gradient(to bottom, #ff0000 0%, #ff0000 50%, #000000 50%, #000000 100%);
+}
+
+body[data-theme="accessibility"] .compass-label {
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+body[data-theme="accessibility"] .stat-card,
+body[data-theme="accessibility"] .trail-card,
+body[data-theme="accessibility"] .weather-current,
+body[data-theme="accessibility"] .forecast-card {
+    border: 3px solid #000000;
+}
+
+body[data-theme="accessibility"] .status-message.info {
+    background-color: #ffffff;
+    color: #000000;
+    border: 3px solid #000000;
+}
+
+body[data-theme="accessibility"] .status-message.success {
+    background-color: #ffffff;
+    color: #008000;
+    border: 3px solid #008000;
+}
+
+body[data-theme="accessibility"] .status-message.warning {
+    background-color: #ffffff;
+    color: #ff8c00;
+    border: 3px solid #ff8c00;
+}
+
+body[data-theme="accessibility"] .status-message.error {
+    background-color: #ffffff;
+    color: #ff0000;
+    border: 3px solid #ff0000;
+}
+
+/* Theme transition animations */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app-header,
+.nav-tabs,
+.app-footer,
+.stat-card,
+.trail-card,
+.weather-current,
+.forecast-card {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
